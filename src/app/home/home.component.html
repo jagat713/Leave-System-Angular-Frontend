@@ -1,0 +1,61 @@
+<div class="container">
+  <!-- Welcome Section -->
+  <div class="welcome-section">
+    <h2>Welcome, {{employeeName}}!</h2>
+    <p>Your current leave balance is <strong>{{leaveBalance}} days</strong>.</p>
+  </div>
+
+  <!-- Apply for Leave Section -->
+  <div class="apply-leave-section">
+    <h3>Apply for Leave</h3>
+    <button class="btn-apply-leave" (click)="applyForLeave()">Apply Now</button>
+  </div>
+
+  <div class="apply-check-section" *ngIf="CheckApplicationButton">
+    <button class="btn-apply-leave">Check leave applications</button>
+  </div>
+
+  <!-- Leave History Section -->
+  <div class="leave-history-section">
+    <h3>Your Recent Leave Applications</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Leave Type</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let leave of recentLeaves">
+          <td>{{leave.leaveType}}</td>
+          <td>{{leave.startDate | date}}</td>
+          <td>{{leave.endDate | date}}</td>
+          <td>{{leave.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Upcoming Leaves Section -->
+  <div class="upcoming-leaves-section">
+    <h3>Upcoming Approved Leaves</h3>
+    <ul>
+      <li *ngFor="let leave of upcomingLeaves">
+        {{leave.leaveType}} from {{leave.startDate | date}} to {{leave.endDate | date}}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="profile-section">
+    <a routerLink="/profile">View/Edit Profile</a>
+  </div>
+
+  <!-- Announcements Section -->
+  <div class="announcements-section">
+    <h3>Announcements</h3>
+    <p>{{announcementMessage}}</p>
+  </div>
+</div>

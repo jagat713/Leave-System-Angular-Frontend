@@ -1,0 +1,74 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .welcome-section {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .apply-leave-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .btn-apply-leave {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .btn-apply-leave:hover {
+    background-color: #45a049;
+  }
+  
+  .leave-history-section, .upcoming-leaves-section, .announcements-section {
+    margin-top: 40px;
+  }
+  
+  .leave-history-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .leave-history-section th, .leave-history-section td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .leave-history-section th {
+    background-color: #f2f2f2;
+  }
+  
+  .upcoming-leaves-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .profile-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .profile-section a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .announcements-section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #FFFACD;
+    border-radius: 5px;
+  }
+  

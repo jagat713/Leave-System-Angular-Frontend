@@ -1,0 +1,94 @@
+#image-container {
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+    padding: 1px;
+}
+
+#login-formContainer {
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #57ad8b;
+}
+
+#mentors-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Login_Form {
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
+}
+
+input {
+    width: 14rem;
+    height: 2rem;
+    border: 0.5px solid grey;
+    border-radius: 5rem;
+    margin: 10px 0;
+    padding-left: 1rem;
+    transition: box-shadow 1s;
+}
+
+input:hover {
+    box-shadow: 0 0 10px 2px rgba(64, 135, 234, 0.7);
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgb(38, 124, 200);
+    color: white;
+    border: none;
+    transition: 1s box-shadow, 1s background-color;
+}
+
+button:hover {
+    box-shadow: 0 0 10px 2px rgba(64, 135, 234, 0.7);
+    background-color: rgba(64, 135, 234, 0.7);
+}
+
+a {
+    display: block;
+    margin-top: 1rem;
+    color: rgb(38, 124, 200);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    #image-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #login-formContainer {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.087); /* Semi-transparent white background */
+        z-index: 10; /* Ensures the login div appears over the image */
+    }
+
+    #Login_Form {
+        width: 90%;
+        max-width: 400px;
+    }
+}
