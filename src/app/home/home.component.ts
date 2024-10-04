@@ -32,5 +32,4 @@ ngOnInit()
     this.CheckApplicationButton=true;
   }
 }
-
 }
