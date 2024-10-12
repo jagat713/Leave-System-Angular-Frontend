@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input} from '@angular/core';
+import { ApplyLeaveComponent } from "../apply-leave/apply-leave.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ApplyLeaveComponent,RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -12,8 +14,9 @@ export class HomeComponent {
 announcementMessage: any;
 upcomingLeaves: any;
 recentLeaves: any;
+ApplyFormVisibility:boolean=false;
 applyForLeave() {
-throw new Error('Method not implemented.');
+this.ApplyFormVisibility=!this.ApplyFormVisibility;
 }
 employeeName: any;
 leaveBalance: any;

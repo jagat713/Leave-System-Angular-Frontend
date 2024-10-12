@@ -1,0 +1,18 @@
+.leave-history-section, .upcoming-leaves-section, .announcements-section {
+    margin-top: 40px;
+  }
+  
+  .leave-history-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .leave-history-section th, .leave-history-section td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .leave-history-section th {
+    background-color: #f2f2f2;
+  }
