@@ -1,1 +1,22 @@
-<p>leave-history works!</p>
+<!-- Leave History Section -->
+<div class="leave-history-section">
+  <h3>Your Recent Leave Applications</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Reason</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of recentLeaves">
+        <td>{{ leave.leaveType }}</td>
+        <td>{{ leave.leaveStart | date }}</td>
+        <td>{{ leave.leaveEnd | date }}</td>
+        <td>{{ leave.leaveReason }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

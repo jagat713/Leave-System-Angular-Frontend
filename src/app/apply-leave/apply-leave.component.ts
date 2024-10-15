@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApplyLeaveComponent implements OnInit {
   recentLeaves:any;
   @Input() employeeData: any;  // Input to receive data from HomeComponent
+  @Output() leaveApplied = new EventEmitter<any>(); // Add EventEmitter to notify parent component
   
   // Initialize leave object with employeeId and teamLeaderId
   leave = {
@@ -44,7 +45,7 @@ export class ApplyLeaveComponent implements OnInit {
     this.http.post("http://localhost:8080/apply-leave", this.leave).subscribe({
       next: (result: any) => {
         console.log('Leave Applied:', result);
-
+        this.leaveApplied.emit(result); 
         // Reset the form
         this.leave = {
           leaveType: '',
