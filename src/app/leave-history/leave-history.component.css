@@ -58,7 +58,7 @@
   background-color: #45a049;
 }
 
-.leave-history-section, .upcoming-leaves-section, .announcements-section {
+.leave-history-section {
   margin-top: 40px;
 }
 
@@ -75,27 +75,4 @@
 
 .leave-history-section th {
   background-color: #f2f2f2;
-}
-
-.upcoming-leaves-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.profile-section {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.profile-section a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #007BFF;
-}
-
-.announcements-section {
-  margin-top: 30px;
-  padding: 15px;
-  background-color: #FFFACD;
-  border-radius: 5px;
 }
